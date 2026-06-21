@@ -497,7 +497,7 @@
 # in diagram:
 
 #BaseException ---> exception ---> zerodivision error - index error - value error - name error - type error - FileNotFound error
-try: 
-    print(50/0)
-except ZeroDivisionError:
-    print("number cannot be divided by zero")
+# try: 
+#     print(50/0)
+# except ZeroDivisionError:
+#     print("number cannot be divided by zero")
