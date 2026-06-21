@@ -460,21 +460,44 @@
 # destructor: it is called automatically to destroy the created objects.
 # -> we use __del__ method to create a destructor.
 # eg:
-class student:
-    def __init__(self,name)
-        self.name=name
-    def display(self):
-        print(f"name={self.name}")
-    def __del__(self):
-        print("deleted object")
-std=student("ram")
-std.display()
+# class student:
+#     def __init__(self,name)
+#         self.name=name
+#     def display(self):
+#         print(f"name={self.name}")
+#     def __del__(self):
+#         print("deleted object")
+# std=student("ram")
+# std.display()
 
-    
+#................................................................................................................................
 
+# execptions:
+# exceptions are the errors generated during the execution of a program which can be hanlded using by and except.
+# --> exception is the base class for most of the system generated errors.
+# --> exception handling is a process of handling the errors using pred=defined exception classes ir with custom exceptions.
+# eg:
+# witout exception handling:
+# print("program started")
+# print(50/0) #errors
+# print("program ended")
+# #--> this will crash the whole program due to a single exception "zerodivisionerror".but we want the above and below statements.
+# # with exception hanlding.
+# print("program started")
+# try:
+#     print(50/0)
+# except:
+#     print("zero division error occured")
+# print("program ended")
+# #--> try:
+# code that might generate any exceptions are written inide the try black.
+#--> except:
+# if any exception that would be generated inside the try block then except block does handles it.
 
+# in diagram:
 
-
-
-
-
+#BaseException ---> exception ---> zerodivision error - index error - value error - name error - type error - FileNotFound error
+try: 
+    print(50/0)
+except ZeroDivisionError:
+    print("number cannot be divided by zero")
