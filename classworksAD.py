@@ -539,4 +539,49 @@
 #         //statement
 #       finally: 
 #         //statement
-    
+
+#...................................................................................................................
+# error:
+# error is a problem in a code that stops the further execution of the program crashing the whole program.
+
+#raise keyword: 
+# not every kind of errors can be handled by the pythons bilt-in execption classes so the programmers/ developers create their own customised execeptions. then inorder to throw an exception we use raise keyword.
+
+#symtax:
+#   raise execption_Name()
+
+#......................................................................................................................
+
+# built in exception classes:
+# --> hijako diagram.
+
+# customized exceptions: 
+# those exceptions that cannot be handled by thr pythons built in exception classes and we create our own exceptions are called customised exceptions.
+
+# balance = 5000
+# withdram_out=int(input("enter a salary"))
+# if withdraw_out>balance:
+#     raise Exception("ffgg")
+# print("withdraw sucessful")
+
+# eg:
+# class insufficientBalanceError(exception):
+
+#     pass
+# balance=5000
+# try:
+#     withdraw_balance=int(input("enter amount to withdraw"))
+#     if withdraw_balance>balance:
+
+#         rasie insufficientBalanceError("insufficient balance")
+#     print("withdraw successful")
+# except insufficientBalanceError as e:
+#     print(e)
+
+# .....................................................................................................................
+# wap to make an instagram login system. draw exception of email or password is invalid. 
+# email = ad23@gmail.com
+# password=ad123
+
+class InvalidEmail|error(exception):
+             
