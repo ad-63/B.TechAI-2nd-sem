@@ -501,3 +501,42 @@
 #     print(50/0)
 # except ZeroDivisionError:
 #     print("number cannot be divided by zero")
+# # nums=[1,5,12,6,18]
+# # print(nums[5]
+# num=int(input("abc"))
+# print(num)
+
+
+# catching specfic error:
+# when we give class name of any exceptions specifically then it secomes catching specific errors.
+# eg: 
+# withot specific:
+# try:
+#     //block of Code 
+# except: 
+#     //block of code 
+
+# with specific:
+#     try: 
+#         //block of code 
+# except valueError:
+#        //block of code 
+
+
+# .....................................................................................................................
+
+# finally:
+# finally is a block of code that gets executed for sure whether the programs has exceptions or not.
+# --> used for:
+      # .closing database connections.
+      # .closing files
+#         .closing network connecctions
+
+# # syntax:
+#       try:
+#         //statement
+#       except: 
+#         //statement
+#       finally: 
+#         //statement
+    
