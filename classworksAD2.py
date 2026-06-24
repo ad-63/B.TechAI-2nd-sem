@@ -108,24 +108,24 @@
 
 #wap to make the  instragram login system draw exception if email or password is invalid 
 #email=ashim
-class Invalidemail(Exception):
-    pass
-class  Invalidpassword(Exception):
-    pass
-valid_email="ad63@gmail.com"
-valid_password="adwitiya123"
-try:
-    email=input("enter your email")
-    password=input(" enter your password")
-    if email!= valid_email:
-        raise Invalidemail("invalid email try again")
-    if password!=valid_password:
-        raise Invalidpassword(" invalid email")
-    print("login successfull")
-except Invalidemail as em:
-    print(em)
-except Invalidpassword as im:
-    print(im)
+# class Invalidemail(Exception):
+#     pass
+# class  Invalidpassword(Exception):
+#     pass
+# valid_email="ad63@gmail.com"
+# valid_password="adwitiya123"
+# try:
+#     email=input("enter your email")
+#     password=input(" enter your password")
+#     if email!= valid_email:
+#         raise Invalidemail("invalid email try again")
+#     if password!=valid_password:
+#         raise Invalidpassword(" invalid email")
+#     print("login successfull")
+# except Invalidemail as em:
+#     print(em)
+# except Invalidpassword as im:
+#     print(im)
 
 #.....................................................................................................................
 
@@ -170,3 +170,49 @@ except Invalidpassword as im:
 #     print(e)
 # except InsufficientBalanceError as e:
 #     print(e)
+
+#......................................................................................................................
+
+# file handling:
+# --> files are  the collection f data which stores data in the centralized storage(disk).
+# --> since, data in file are stored in disks, thats why we can fetch data even after years in time and are avaliable till we destroy them.
+# --> file handling is a process of reading from and writing to a file.
+
+# step in file handling:
+# i) opening a file --> open() function is used
+# ii) reading or writing to a file --> write() or read() function is used
+# ii) closing the file --> close() function is used
+
+# files can be accessed in two ways
+# a) sequential access: 
+#                --> follos a sequential pattern one after another.
+# eg: 1-->2-->3-->4.  time complexity=0(n)
+
+#b) random access: we can fetch data from where we went i.e no any sequential order.
+# eg: if we want to fetch from 5th index, we can directly fetch it.
+#"python programming" 
+# from 5th --> N programming.  --> time complexity-->0(i)
+
+# modes in file handling:
+# a) w----> wite mode
+# b) r----> read mmode
+# c) a----> append mode
+# d) wt---> write + read
+# e) rt---> read + write
+# f) x----> execute 
+# g) xt---> execute + read or write
+# h) at---> append + read
+
+# 1) WAP to store "purbanchal university"in py.txt
+# syntax: --> open(filename, mode)   --> write(w) mode --> creates a new file if it does not exists previously.
+# file=open("pu.txt", "r")
+# data=file.read()
+# print(data)
+# file.close()
+
+# 2) wap to input and write your name into name.txt.
+
+file=open("name.txt","w")
+name=input("enter your name")
+file.write(name)
+file.close()
