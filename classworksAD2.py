@@ -212,7 +212,26 @@
 
 # 2) wap to input and write your name into name.txt.
 
-file=open("name.txt","w")
-name=input("enter your name")
-file.write(name)
+# file=open("name.txt","w")
+# name=input("enter your name")
+# file.write(name)
+# file.close()
+
+#............................................................................................................................
+
+# wap to copy the contents of pu.txt to new_pu.txt.
+
+file=open("pu.txt","r")
+data=file.road()
 file.close()
+new_file=open("new_pu.txt","w")
+new_file.write(data)
+new_file.close()
+print("data copied successfully")
+new_file=open("new_pu.txt","r")
+new_file_data=new_file.read()
+print(new_file_data)
+new_file.close()
+
+# wap to inout name, age and address of a student and store it in std.txt.
+# wap to cunt no. of vowels in a file std.txt
