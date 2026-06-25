@@ -255,13 +255,13 @@
 
 # wap to input name for 5 students and store it in many_std.txt file
 
-file=open("std.txt","w")
-print("enter the names of 5 students:")
+# file=open("std.txt","w")
+# print("enter the names of 5 students:")
 
-for i in range(1, 6):
-    name = input(f"Enter name for student {i}: ")
-    file.write(name + '\n')
+# for i in range(1, 6):
+#     name = input(f"Enter name for student {i}: ")
+#     file.write(name + '\n')
 
-file.close()
+# file.close()
 
-print("\nSuccessfully saved the names to many_std.txt.")
+# print("\nSuccessfully saved the names to many_std.txt.")
