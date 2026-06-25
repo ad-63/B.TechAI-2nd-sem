@@ -221,17 +221,47 @@
 
 # wap to copy the contents of pu.txt to new_pu.txt.
 
-file=open("pu.txt","r")
-data=file.road()
-file.close()
-new_file=open("new_pu.txt","w")
-new_file.write(data)
-new_file.close()
-print("data copied successfully")
-new_file=open("new_pu.txt","r")
-new_file_data=new_file.read()
-print(new_file_data)
-new_file.close()
+# file=open("pu.txt","r")
+# data=file.road()
+# file.close()
+# new_file=open("new_pu.txt","w")
+# new_file.write(data)
+# new_file.close()
+# print("data copied successfully")
+# new_file=open("new_pu.txt","r")
+# new_file_data=new_file.read()
+# print(new_file_data)
+# new_file.close()
 
-# wap to inout name, age and address of a student and store it in std.txt.
-# wap to cunt no. of vowels in a file std.txt
+# # wap to inout name, age and address of a student and store it in std.txt.
+
+# file=open("std.txt","w")
+# name=input("enter name:")
+# age=input("enter age:")
+# address=input("enter address")
+# file.write(f"{name}\n{age}\n{address}")
+# print("Data stored successfully")
+# file.close()
+
+# # wap to cunt no. of vowels in a file std.txt
+
+# file=open("std.txt","r")
+# count=0
+# data=file.read()
+# for ch in data: 
+#     if ch in "aeiou":
+#         count=count+1
+# print("number of vowels=", count)
+
+# wap to input name for 5 students and store it in many_std.txt file
+
+file=open("std.txt","w")
+print("enter the names of 5 students:")
+
+for i in range(1, 6):
+    name = input(f"Enter name for student {i}: ")
+    file.write(name + '\n')
+
+file.close()
+
+print("\nSuccessfully saved the names to many_std.txt.")
