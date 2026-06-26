@@ -265,3 +265,62 @@
 # file.close()
 
 # print("\nSuccessfully saved the names to many_std.txt.")
+
+#.........................................................................................................................
+
+# WAP to input name, age, address of N number of students nand diplay the youngest age student detail.
+
+n = int(input("Enter the number of students: "))
+students = []
+for i in range(n):
+    print(f"\nEnter details for student {i + 1}:")
+    name = input("Name: ")
+    age = int(input("Age: "))
+    address = input("Address: ")
+    students.append({
+        "name": name,
+        "age": age,
+        "address": address
+youngest_student = min(students, key=lambda s: s["age"])
+
+
+print("\n--- Youngest Student Details ---")
+print(f"Name: {youngest_student['name']}")
+print(f"Age: {youngest_student['age']}")
+print(f"Address: {youngest_student['address']}")
+
+# 2) WAP to read a gile std.txt and store all vowels into vowels.txt and all consonants into condonents.txt.
+
+vowels_list = 'aeiouAEIOU'
+
+try:
+    with open("std.txt", "r") as source_file, \
+         open("vowels.txt", "w") as vowel_file, \
+         open("consonants.txt", "w") as consonant_file:
+        content = source_file.read()
+        
+        for char in content:
+            if char.isalpha():
+                if char in vowels_list:
+                    vowel_file.write(char)
+                else:
+                    consonant_file.write(char)
+                    
+    print("File processing completed successfully.")
+
+except FileNotFoundError:
+    print("Error: The file std.txt was not found. Please create it first.")
+
+#................................................................................................................................
+
+# wap to read only 3 names frm a file std_name.txt
+
+file=open("std_name.txt","r")
+count=0
+for i in range(3):
+    data=file.readline()
+    print(data.strip())
+print("data fecthed sucessfully.")
+
+#.........................................................................................................................
+

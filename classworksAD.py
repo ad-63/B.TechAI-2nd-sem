@@ -1,191 +1,64 @@
-# # wap to show class and objet imlementation
-# class student:
-# def set_data(self,name,age):
-#     self.name=name
-#     self.age=age
-    
-# def display():
-#     print(f"name={self.name},age={self.age}")
-
-# std1=student()
-# std1.set_data("ram",20)
-# std1.display()
-
-#................................................................................................................................................................
-
-# # class and obj
-
-# class student:#     def __init__(self,name,age):
-#         self.name=name
-#         self.age=age
-#     def display(self):
-#         print(f"name={self.name},age={self.age}")
-#  std1=student("ram",20)
-#  std1.display()
-
-#..................................................................................................................................................................
-
-# # to store details of two cars and display the highest priced car.
-# class car:
-   #  def __init__(self,brand,price):
-    
-
-
-#         self.brand=brand
-#         self.price=price
-
-   
-#         def display(self):
-
-#          print(f"name={self.name}\n price={self.price}")
-         
-# c1=car("mercedes",1000000)
-# c2=car("hyundai", 800000)
-# print(c1.price)
-# print(c2.price)
-# if c1.print>c2.price:
-#    c1.display()
-# else:
-#    c2.display()
-
-# ..............................................................................................................................................................
-
-# class a:
-#     print("xoro yujal k xa  chor aayo")
-
-
-# class b:
-#     print("xori xori yujaliii chorrr aayoooo!!")
-
-
-# class c(a,b):
-#     print("bhag bhag xora xori")
-
-
-# class book:
-    
-#     def __init__(self,name,r_year):
-#         self.name=name
-#         self.r_year=r_year
-
-
-
-#     def display(self):
-
-#...............................................................................................................................................................
-
-# wap to input N students detail and display the highest age student details.
-
-# class student:
-#     def __init__(self,name,age):
-#         self.name=name
-#         self.age=age
-
-#     def display(self):
-
-#         print(f"Name={self.name}\n Age={self.age}")
-
-# size=int(input("enter how many students to store:"))
-
-# student_list=[]
-
-# for i in range(size):
-
-#     name=input(f"enter{i+1} student name:")
-#     age=int(input(f"enter{i+1}student age:"))
-#     student_list.append(student(name,age))
-# # declearing highest age for comparison    
-# highest_age=student_list[0].age
-# for std in student_list:
-#     if std.age>highest_age:
-#         highest_age=std.age
-# # printing highest age student details
-# for std in student_list:
-#     if highest_age==std.age:
-#         std.display()
-    
-# ................................................................................................................................................................
-
-# class ATM:
-#     def __init__(self,name,balance):
-        
-#         self.name=name
-#         self.balance=balance
-        
-#     def update_balance(self):
-       
-       
-#        self.balance=self.balance+5000
-
-
-#     def display_balance(self):
-   
-   
-   
-#       print(f"name={self.name}\n balance={self.balance}")
-# atm1=ATM("ram",10000)
-# atm1.update_balance() 
 
 #....................................................................................................................................................................  
    
 # multiple inheritance: if we inherit the feature and methods from multiple parent class to any one child class then it is called multiple inheritance.
 
-# class father:
-#     def land(self):
-#         print("land is the property of father")
+class father:
+    def land(self):
+        print("land is the property of father")
 
-# class mother:
-#     def money(self):
-#         print("money is the property of mother")
+class mother:
+    def money(self):
+        print("money is the property of mother")
 
-# class son(father,mother):
-#     pass
+class son(father,mother):
+    pass
 
-# son=son()
-# son.land()  
-# son.money()       
+son=son()
+son.land()  
+son.money()       
 
 #.................................................................................................................................................................
 
-# class person:
-#     def display(self,name):
-#         print("name=",name)
+class person:
+    def display(self,name):
+        print("name=",name)
 
-# class student(person):
-#     pass
+class student(person):
+    pass
 
-# class teacher(person):
-#     pass
-# std=student()
-# std.display("ram")
-# teacher=teacher() 
-# teacher.display("hari")
+class teacher(person):
+    pass
+std=student()
+std.display("ram")
+teacher=teacher() 
+teacher.display("hari")
 
 #..................................................................................................................................................................
 
 #  polymorphism: it is a feature of oop in which a "methord" have different forms.
-# it can be achived in two ways:
-# 1. method overloading: when we have more than one method with the same name but different parameters in the same class then it is called method overloading.
-# 2. method overriding: when we have a method in the parent class and the same method in the child class then it is called method overriding.
+it can be achived in two ways:
+1. method overloading: when we have more than one method with the same name but different parameters in the same class then it is called method overloading.
+2. method overriding: when we have a method in the parent class and the same method in the child class then it is called method overriding.
 
 # method overloading:
 
-# class animal:
-#      def sound(self):
-#          print("animal sound")
+class animal:
+     def sound(self):
+         print("animal sound")
 
-# class dog(animal):
-#        def sound(self):
-#           print("dog barks")
+class dog(animal):
+       def sound(self):
+          print("dog barks")
 
-# class cat(animal):
-#         def sound(self):
-#             print("cat meows")     
+class cat(animal):
+        def sound(self):
+            print("cat meows")     
 
-# dog=dog()
-# dog.sound()
-# cat=cat()
-# cat.sound()
+dog=dog()
+dog.sound()
+cat=cat()
+cat.sound()
 
 #...................................................................................................................................................................
 
