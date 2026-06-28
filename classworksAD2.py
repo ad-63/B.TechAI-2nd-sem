@@ -324,3 +324,13 @@ print("data fecthed sucessfully.")
 
 #.........................................................................................................................
 
+#6/28/2026
+
+# random access in files:
+file=open("std.txt","r")
+print(file.read())
+fileseek(0)
+print(file.read())
+file.close()
+
+# 
