@@ -174,9 +174,9 @@
 #......................................................................................................................
 
 # file handling:
-# --> files are  the collection f data which stores data in the centralized storage(disk).
-# --> since, data in file are stored in disks, thats why we can fetch data even after years in time and are avaliable till we destroy them.
-# --> file handling is a process of reading from and writing to a file.
+--> files are  the collection f data which stores data in the centralized storage(disk).
+--> since, data in file are stored in disks, thats why we can fetch data even after years in time and are avaliable till we destroy them.
+--> file handling is a process of reading from and writing to a file.
 
 # step in file handling:
 # i) opening a file --> open() function is used
