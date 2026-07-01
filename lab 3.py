@@ -87,3 +87,5 @@
 
 # oldest = max(patients, key=lambda p: p.age)
 # print(f"The oldest patient is {oldest.name}, aged {oldest.age}.")
+
+from collections import counter
