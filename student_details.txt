@@ -1,0 +1,2 @@
+AD,kathmandu,21
+SD,sun,23
