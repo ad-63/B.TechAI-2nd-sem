@@ -55,14 +55,28 @@
 #             print(f"Roll Number: {roll}, Name: {name}, Marks: {marks}")2
 
 
-filename = input("Enter the filename to read: ")
+# filename = input("Enter the filename to read: ")
+# try:
+#     with open(filename, "r") as f:
+#         content = f.read()
+#         print(content)
+# except FileNotFoundError:
+#     print("Error: The file was not found.")
+# except PermissionError:
+#     print("Error: You do not have permission to access this file.")
+# except FileExistsError:
+#     print("Error: The file already exists.")
+
+
+source_file = input("Enter the source filename: ")
+destination_file = input("Enter the destination filename: ")
+
 try:
-    with open(filename, "r") as f:
-        content = f.read()
-        print(content)
+    with open(source_file, "r") as src, open(destination_file, "w") as dest:
+        content = src.read()
+        dest.write(content)
+    print("File copied successfully!")
 except FileNotFoundError:
-    print("Error: The file was not found.")
+    print("Error: Source file not found.")
 except PermissionError:
-    print("Error: You do not have permission to access this file.")
-except FileExistsError:
-    print("Error: The file already exists.")
+    print("Error: Permission denied.")
