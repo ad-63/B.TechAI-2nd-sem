@@ -1,2 +1,4 @@
-AD,kathmandu,21
-SD,sun,23
+AD,Kathmandu,19
+sita,pok,20
+Ram,Kathmandu,19
+hi,htg,23
