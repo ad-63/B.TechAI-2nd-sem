@@ -142,37 +142,37 @@
 
 
 
-import mysql.connector
-from mysql.connector import ProgrammingError, IntegrityError, OperationalError
+# import mysql.connector
+# from mysql.connector import ProgrammingError, IntegrityError, OperationalError
 
-try:
-    conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="adwitiya123",
-        database="OfficeDB"
-    )
-    cursor = conn.cursor()
+# try:
+#     conn = mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="adwitiya123",
+#         database="OfficeDB"
+#     )
+#     cursor = conn.cursor()
 
-    insert_query = """
-        INSERT INTO Employee (emp_id, emp_name, age, gender, department, salary)
-        VALUES (%s, %s, %s, %s, %s, %s)
-    """
-    cursor.execute(insert_query, (1, "Test User", 25, "Male", "IT", 30000))
-    conn.commit()
-    print("Employee inserted successfully.")
+#     insert_query = """
+#         INSERT INTO Employee (emp_id, emp_name, age, gender, department, salary)
+#         VALUES (%s, %s, %s, %s, %s, %s)
+#     """
+#     cursor.execute(insert_query, (1, "Test User", 25, "Male", "IT", 30000))
+#     conn.commit()
+#     print("Employee inserted successfully.")
 
-    cursor.close()
-    conn.close()
+#     cursor.close()
+#     conn.close()
 
-except ProgrammingError as e:
-    print(f"Programming Error: {e}")
-except IntegrityError as e:
-    print(f"Integrity Error: {e}")
-except OperationalError as e:
-    print(f"Operational Error: {e}")
-except mysql.connector.Error as e:
-    print(f"Database Error: {e}")
+# except ProgrammingError as e:
+#     print(f"Programming Error: {e}")
+# except IntegrityError as e:
+#     print(f"Integrity Error: {e}")
+# except OperationalError as e:
+#     print(f"Operational Error: {e}")
+# except mysql.connector.Error as e:
+#     print(f"Database Error: {e}")
 
 
 
@@ -261,3 +261,60 @@ except mysql.connector.Error as e:
 
 # except mysql.connector.Error as e:
 #     print(f"Error connecting to MySQL: {e}")
+
+import mysql.connector
+
+con = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="root"
+)
+
+cur = con.cursor()
+
+cur.execute("CREATE DATABASE IF NOT EXISTS officeDB")
+cur.execute("USE officeDB")
+
+cur.execute("""
+CREATE TABLE IF NOT EXISTS Employee(
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    age INT,
+    gender VARCHAR(10),
+    department VARCHAR(30),
+    salary FLOAT
+)
+""")
+
+print("Database and Table Created Successfully")
+
+con.close()
+
+
+
+
+
+
+import mysql.connector
+
+con = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="root",
+    database="officeDB"
+)
+
+cur = con.cursor()
+
+n = int(input("Enter Number of Employees: "))
+
+for i in range(n):
+    emp_id = int(input("Employee ID: "))
+    name = input("Name: ")
+    age = int(input("Age: "))
+    gender = input("Gender: ")
+    dept = input("Department: ")
+    salary = float(input("Salary: "))
+
+    sql = "INSERT INTO Employee VALUES(%s,%s,%s,%s,%s,%s)"
+    val = (emp_id,name,age,
