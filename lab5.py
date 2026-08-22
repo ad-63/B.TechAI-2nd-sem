@@ -199,15 +199,38 @@
 
 
 
-source_file = input("Enter the source filename: ")
-destination_file = input("Enter the destination filename: ")
+# source_file = input("Enter the source filename: ")
+# destination_file = input("Enter the destination filename: ")
 
-try:
-    with open(source_file, "r") as src, open(destination_file, "w") as dest:
-        content = src.read()
-        dest.write(content)
-    print("File copied successfully!")
-except FileNotFoundError:
-    print("Error: Source file not found.")
-except PermissionError:
-    print("Error: Permission denied.")
+# try:
+#     with open(source_file, "r") as src, open(destination_file, "w") as dest:
+#         content = src.read()
+#         dest.write(content)
+#     print("File copied successfully!")
+# except FileNotFoundError:
+#     print("Error: Source file not found.")
+# except PermissionError:
+#     print("Error: Permission denied.")
+
+import socket
+
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind(("localhost", 9999))
+server.listen(1)
+print("Server waiting for connection...")
+
+conn, addr = server.accept()
+print(f"Connected to {addr}")
+conn.send("Welcome to Orchid College".encode())
+conn.close()
+server.close()
+
+import socket
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(("localhost", 9999))
+message = client.recv(1024).decode()
+print(f"Message from server: {message}")
+client.close()
+
+
